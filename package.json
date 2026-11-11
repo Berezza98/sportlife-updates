@@ -1,0 +1,27 @@
+{
+  "name": "sportlife-info-bot",
+  "version": "1.0.0",
+  "description": "Telegram-бот для підписки на оновлення стану клубів (світло, вода, басейн, лазні)",
+  "type": "module",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "dev": "tsx watch --include .env --env-file-if-exists=.env src/index.ts",
+    "check": "tsx --env-file-if-exists=.env src/check.ts"
+  },
+  "dependencies": {
+    "@grammyjs/auto-retry": "^2.0.2",
+    "csv-parse": "^7.0.3",
+    "grammy": "^1.46.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
